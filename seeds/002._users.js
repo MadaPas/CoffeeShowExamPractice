@@ -3,17 +3,17 @@ exports.seed = function (knex) {
   return knex('users').insert([{
       username: "user",
       email: "user@user-area.com",
-      password: "password"
+      password: "$2b$12$0kYCD..VQ/ABkSagZON8SeZAQ1lAVGwxtvWDmYq9mYjOr.6C1qrZG"
     }, //password
     {
       username: "user1",
       email: "user1@user-area.com",
-      password: "password1"
+      password: "$2b$12$d5bpORb4QcvTIvpRLtO5f.seGn47pJF09hV3IDS/MNoQ1QNncIKpW"
     }, //user_pass1
     {
       username: "user2",
       email: "user2@user-area.com",
-      password: "password2"
+      password: "$2b$12$TN9ULfqm3UChAa7el16WseyPJjKHt3IfHUlbjdl6X6XPlfNuTymz."
     } //user_pass2
   ]);
 
