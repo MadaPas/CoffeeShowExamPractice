@@ -15,9 +15,56 @@ const navbar = fs.readFileSync('./public/fragments/navbar.html', 'utf8');
 const footer = fs.readFileSync('./public/fragments/footer.html', 'utf8');
 
 const login = fs.readFileSync('./public/auth/login/login.html', 'utf8');
+const register = fs.readFileSync('./public/auth/register/register.html', 'utf8');
 
 router.get('/login', (req, res) => {
     return res.send(header + navbar + login + footer);
+});
+
+router.get('/register', (req, res) => {
+    return res.send(header + navbar + register + footer);
+});
+
+router.post('/register', (req, res) => {
+    const {
+        username,
+        password
+    } = req.body;
+    if (username && password) {
+        // password validation
+        if (password.length < 8) {
+            return res.status(400).send({
+                response: "The password must be 8 characters or longer!"
+            });
+        } else {
+            try {
+                User.query().select('username').where('username', username).then(foundUser => {
+                    if (foundUser.length > 0) {
+                        return res.status(400).send({
+                            response: "This user already exists!"
+                        });
+                    } else {
+                        bcrypt.hash(password, saltRounds).then(hashedPassword => {
+                            User.query().insert({
+                                username,
+                                password: hashedPassword
+                            }).then(createdUser => {
+                                return res.redirect('/login');
+                            });
+                        });
+                    }
+                });
+            } catch (error) {
+                return res.status(500).send({
+                    response: "Something went wrong with the DB!"
+                });
+            }
+        }
+    } else {
+        return res.status(400).send({
+            response: "The username or password are missing!"
+        });
+    }
 });
 
 router.post('/login', (req, res) => {
