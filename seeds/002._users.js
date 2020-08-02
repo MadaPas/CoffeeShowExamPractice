@@ -9,12 +9,12 @@ exports.seed = function (knex) {
       username: "user1",
       email: "user1@user-area.com",
       password: "$2b$12$d5bpORb4QcvTIvpRLtO5f.seGn47pJF09hV3IDS/MNoQ1QNncIKpW"
-    }, //user_pass1
+    }, //password1
     {
       username: "user2",
       email: "user2@user-area.com",
       password: "$2b$12$TN9ULfqm3UChAa7el16WseyPJjKHt3IfHUlbjdl6X6XPlfNuTymz."
-    } //user_pass2
+    } //password2
   ]);
 
 };
