@@ -54,14 +54,28 @@ const saltRounds = 12;
 */
 const fs = require('fs');
 
-const header = fs.readFileSync('./public/fragments/header.html', 'utf8')
-const navbar = fs.readFileSync('./public/fragments/navbar.html', 'utf8');
+const header = fs.readFileSync('./public/fragments/header.html', 'utf8');
+const navbarIndex = fs.readFileSync('./public/fragments/navbarIndex.html', 'utf8');
+const navbarUser = fs.readFileSync('./public/fragments/navbarUser.html', 'utf8');
+
 const footer = fs.readFileSync('./public/fragments/footer.html', 'utf8');
 
-const home = fs.readFileSync('./public/home.html', 'utf8');
+const homeIndex = fs.readFileSync('./public/home/homeIndex.html', 'utf8');
+const homeUser = fs.readFileSync('./public/home/homeUser.html', 'utf8');
 
-app.get('/', (req, res) => {
-    return res.send(header + navbar + home + footer)
+
+app.get("/", (req, res) => {
+    if (req.session.signedIn) {
+        return res.redirect("/user");
+    }
+    return res.send(header + navbarIndex + homeIndex + footer)
+});
+
+app.get("/user", (req, res) => {
+    if (req.session.signedIn) {
+        return res.send(header + navbarUser + homeUser + footer)
+    }
+    return res.redirect('/login');
 });
 
 /* 
