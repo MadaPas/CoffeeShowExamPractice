@@ -71,13 +71,6 @@ app.get("/", (req, res) => {
     return res.send(header + navbarIndex + homeIndex + footer)
 });
 
-app.get("/user", (req, res) => {
-    if (req.session.signedIn) {
-        return res.send(header + navbarUser + homeUser + footer)
-    }
-    return res.redirect('/login');
-});
-
 /* 
     import and setup routes
 */
