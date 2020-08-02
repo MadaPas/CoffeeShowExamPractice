@@ -7,6 +7,8 @@ const bcrypt = require('bcrypt');
 */
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
+app.use(express.static('public'));
+
 
 const session = require('express-session');
 // you need to copy the config.template.json file and fill out your secret
@@ -36,15 +38,44 @@ const knex = Knex(knexFile.development); // This is how you can have different e
 Model.knex(knex);
 
 const saltRounds = 12;
-bcrypt.hash("password", saltRounds, function(err, hash) {
-    console.log("user:", hash);
+// bcrypt.hash("password", saltRounds, function(err, hash) {
+//     console.log("user:", hash);
+// });
+// bcrypt.hash("password1", saltRounds, function(err, hash) {
+//     console.log("user1:", hash);
+// });
+// bcrypt.hash("password2", saltRounds, function(err, hash) {
+//     console.log("user2:", hash);
+// });
+
+
+/* 
+    render views
+*/
+const fs = require('fs');
+
+const header = fs.readFileSync('./public/fragments/header.html', 'utf8')
+const navbar = fs.readFileSync('./public/fragments/navbar.html', 'utf8');
+const footer = fs.readFileSync('./public/fragments/footer.html', 'utf8');
+
+const home = fs.readFileSync('./public/home.html', 'utf8');
+
+app.get('/', (req, res) => {
+    return res.send(header + navbar + home + footer)
 });
-bcrypt.hash("password1", saltRounds, function(err, hash) {
-    console.log("user1:", hash);
-});
-bcrypt.hash("password2", saltRounds, function(err, hash) {
-    console.log("user2:", hash);
-});
+
+/* 
+    import and setup routes
+*/
+
+const usersRoute = require('./routes/users.js');
+app.use(usersRoute);
+const authRoute = require('./routes/auth.js');
+app.use(authRoute);
+const coffeesRoute = require('./routes/coffees.js');
+app.use(coffeesRoute);
+
+
 /* 
     Start server 
 */
