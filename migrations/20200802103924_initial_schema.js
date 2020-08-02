@@ -1,17 +1,17 @@
 exports.up = function (knex) {
     return knex.schema
         .createTable('users', (table) => {
-            table.increments('id').notNullable();
+            table.increments('id');
             table.string('username').unique().notNullable();
             table.string('email').unique().notNullable();
             table.string('password').notNullable();
 
             table.dateTime('updated_at').defaultTo(knex.raw('NULL ON UPDATE CURRENT_TIMESTAMP'));
-            table.dateTime('created_at').notNullable().defaultTo(knex.raw('CURRENT_TIMESTAMP'));
+            table.timestamp('created_at').defaultTo(knex.fn.now());
         })
         .createTable('categories', table => {
-            table.increments('id').unique().notNullable();
-            table.string('category').unique().notNullable()
+            table.increments('id');
+            table.string('category').unique().notNullable();
         })
         .createTable('coffees', (table) => {
             table.increments('id');
@@ -22,17 +22,23 @@ exports.up = function (knex) {
             table.string('picture');
             table.string('size');
 
-            table.integer('category_id').notNullable();
+            table.integer('category_id').unsigned().notNullable();
             table.foreign('category_id').references('categories.id');
 
-            table.integer('user_id').unsigned();
-            table.foreign('user_id').references('users.id')
         })
+        .createTable('users_coffees', table => {
+            table.integer("user_id").unsigned().notNullable();
+            table.foreign("user_id").references("users.id");
+
+            table.integer("coffee_id").unsigned().notNullable();
+            table.foreign("coffee_id").references("coffees.id");
+        });
 
 };
 
 exports.down = function (knex) {
     return knex.schema
+        .dropTableIfExists('users_coffees')
         .dropTableIfExists('coffees')
         .dropTableIfExists('categories')
         .dropTableIfExists('users');

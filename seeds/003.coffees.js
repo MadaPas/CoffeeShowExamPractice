@@ -7,8 +7,7 @@ exports.seed = function (knex) {
       weight: "750 gr",
       picture: "costa-rica1.jpg",
       size: "large",
-      category_id: 4,
-      user_id: users.find(user => user.username == "user").id
+      category_id: 4
     },
     {
       coffee_name: "UK - Ethiopia Yirgacheffe Coffee",
@@ -17,18 +16,16 @@ exports.seed = function (knex) {
       weight: "750 gr",
       picture: "ethiopia.jpg",
       size: "large",
-      category_id: 4,
-      user_id: users.find(user => user.username == "user").id
+      category_id: 4
     },
     {
-      coffee_name: "UK - Tanzania Peaberry Coffee ",
+      coffee_name: "UK - Tanzania Peaberry Coffee",
       description: "Mount Kilimanjaro, a dormant volcano in northern Tanzania, is the highest peak in Africa at 19,330 feet. Kilimanjaro's lower slopes provide fertile soil to grow Tanzania Peaberry Coffee, and the climate provides excellent conditions for coffee trees to thrive. Grown and harvested on the slopes of Mount Kilimanjaro near the Kenyan border, this gourmet African coffee displays many of the characteristics of Kenyan coffee, though much lighter in acidity.Peaberry beans are small, round coffee beans with a cleft in the middle; they have a richer flavor than their oval- shaped counterparts, often rendering a livelier cup with a full body and distinguished aroma. Peaberry coffee is rare; only 10% of all coffee develops with this characteristic. As a result, peaberry coffee beans must be hand-sorted from the rest.",
       price: 90,
       weight: "750 gr",
       picture: "tanzania.jpg",
       size: "large",
-      category_id: 4,
-      user_id: users.find(user => user.username == "user").id
+      category_id: 4
     },
     {
       coffee_name: "UK - Sumatra Black Satin Coffee",
@@ -37,28 +34,25 @@ exports.seed = function (knex) {
       weight: "750 gr",
       picture: "sumatra.jpg",
       size: "large",
-      category_id: 4,
-      user_id: users.find(user => user.username == "user").id
+      category_id: 4
     },
     {
-      coffee_name: "UK - Jamaica Blue Mountain Estate Coffee ",
+      coffee_name: "UK - Jamaica Blue Mountain Estate Coffee",
       description: "100% pure certified Jamaica Blue Mountain Estate Coffee, Grade 1 is known throughout the world as one of the best gourmet coffees. The standard of quality for Jamaica Blue Mountain Coffee is incomparable with any other coffee because of the stringent and precise regulations; this is the reason that this particular gourmet coffee is considered one of the most exceptional coffees in the world.High-grown in a precise geographical location and under specific conditions, these Arabica beans have earned their certification as 100% Pure Jamaica Blue Mountain Estate. The amount of coffee produced is limited due to the amount of production space, and the demand is extremely high because of its exclusively rich taste and characteristics.Jamaica Blue Mountain Estate Coffee has a full body that is well-balanced; it delivers subtle acidity and a smooth chocolate finish leaving not a single trace of bitterness.",
       price: 100,
       weight: "750 gr",
       picture: "IRISH.png",
       size: "large",
-      category_id: 4,
-      user_id: users.find(user => user.username == "user").id
+      category_id: 4
     },
     {
-      coffee_name: "UK - Kenya AA Coffee ",
+      coffee_name: "UK - Kenya AA Coffee",
       description: "Kenya AA coffee, which is grown at elevations of 4,900 to 6,800 feet, is nearing the top of the list of the world's finest Arabica bean coffees. When it comes to coffee production, Kenya has a reputation for absolute excellence, especially because it lies near the region where coffee beans originated.cThese gourmet coffee beans are grown on volcanic soils and are wet-processed; the beans are harvested, immediately removed from the cherries, and washed to remove the excess pulp. This process causes the coffee to have a full body of flavor with a heavy acidity. It also displays a gentle floral aroma as well as berry and citrus notes. ",
       price: 110,
       weight: "750 gr",
       picture: "kenya.jpg",
       size: "large",
-      category_id: 4,
-      user_id: users.find(user => user.username == "user").id
+      category_id: 4
     },
     {
       coffee_name: "UK - Earl Grey Tea",
@@ -67,8 +61,7 @@ exports.seed = function (knex) {
       weight: "450 gr",
       picture: "earlgrey.jpg",
       size: "medium",
-      category_id: 3,
-      user_id: users.find(user => user.username == "user").id
+      category_id: 3
     },
     {
       coffee_name: "UK - Iced Tea Blend",
@@ -77,8 +70,7 @@ exports.seed = function (knex) {
       weight: "450 gr",
       picture: "iced-tea.jpg",
       size: "medium",
-      category_id: 3,
-      user_id: users.find(user => user.username == "user").id
+      category_id: 3
     },
     {
       coffee_name: "UK - Masala Chai Tea",
@@ -87,8 +79,7 @@ exports.seed = function (knex) {
       weight: "450 gr",
       picture: "masala.png",
       size: "medium",
-      category_id: 3,
-      user_id: users.find(user => user.username == "user").id
+      category_id: 3
     },
     {
       coffee_name: "UK - Formosa Oolong Tea",
@@ -97,8 +88,7 @@ exports.seed = function (knex) {
       weight: "450 gr",
       picture: "formosa2.jpg",
       size: "medium",
-      category_id: 3,
-      user_id: users.find(user => user.username == "user").id
+      category_id: 3
     },
     {
       coffee_name: "UK - Rooibos 'African Red Bush' Herbal Tea",
@@ -107,8 +97,7 @@ exports.seed = function (knex) {
       weight: "450 gr",
       picture: "rooibos.jpg",
       size: "medium",
-      category_id: 3,
-      user_id: users.find(user => user.username == "user").id
+      category_id: 3
     },
     {
       coffee_name: "UK - Sencha Kyoto Cherry Rose Tea",
@@ -117,28 +106,25 @@ exports.seed = function (knex) {
       weight: "450 gr",
       picture: "sencha.jpg",
       size: "medium",
-      category_id: 3,
-      user_id: users.find(user => user.username == "user").id
+      category_id: 3
     },
     {
-      coffee_name: "UK - Apricot Supreme Tisane ",
+      coffee_name: "UK - Apricot Supreme Tisane",
       description: "This Supreme Apricot Tisane tea is the sweetest apricot flavor around. If you love the sweet fruit with its soft fragrance and delicious taste, you will love the fresh apricot, rosehips, hibiscus leaves, and marigold petals.With a fresh, rejuvenating flavor, the Supreme Apricot Tisane is perfect hot or cold. If you like the benefits of drinking tea and you’re looking for a warm, delicious flavor – the Supreme Apricot tea is a succulent treat that will give you all the health benefits with the entire sweet, succulent flavor. ",
       price: 55,
       weight: "450 gr",
       picture: "apricot.jpg",
       size: "medium",
-      category_id: 3,
-      user_id: users.find(user => user.username == "user").id
+      category_id: 3
     },
     {
-      coffee_name: "UK - Blueberry Flavored Tea ",
+      coffee_name: "UK - Blueberry Flavored Tea",
       description: "Blueberry flavored tea offers the tangy-tart sweetness we all love with our Chinese black tea and calendula petals for that perfect cup of tea. The fruity aroma of blueberry flavored tea is sure to put a spring in your step and a smile on your face. Sun-kissed flavored goodness in every freshly brewed cup will keep you coming back for more!",
       price: 70,
       weight: "450 gr",
       picture: "blueberry.jpg",
       size: "medium",
-      category_id: 3,
-      user_id: users.find(user => user.username == "user").id
+      category_id: 3
     },
     {
       coffee_name: "Espresso",
@@ -147,8 +133,7 @@ exports.seed = function (knex) {
       weight: "50 ml",
       picture: "ESPRESSO.png",
       size: "small",
-      category_id: 5,
-      user_id: users.find(user => user.username == "user").id
+      category_id: 5
     },
     {
       coffee_name: "Caffe Latte",
@@ -157,8 +142,7 @@ exports.seed = function (knex) {
       weight: "150 ml",
       picture: "LATTE.png",
       size: "small",
-      category_id: 5,
-      user_id: users.find(user => user.username == "user").id
+      category_id: 5
     },
     {
       coffee_name: "Frappuccino",
@@ -167,8 +151,7 @@ exports.seed = function (knex) {
       weight: "250 ml",
       picture: "FRAPUCCINO.png",
       size: "medium",
-      category_id: 5,
-      user_id: users.find(user => user.username == "user").id
+      category_id: 5
     },
     {
       coffee_name: "Cafe Mocha",
@@ -177,8 +160,7 @@ exports.seed = function (knex) {
       weight: "150 ml",
       picture: "MOCHA.png",
       size: "small",
-      category_id: 5,
-      user_id: users.find(user => user.username == "user").id
+      category_id: 5
     },
     {
       coffee_name: "Caramel Macchiato",
@@ -187,18 +169,16 @@ exports.seed = function (knex) {
       weight: "250 ml",
       picture: "MACCHIATO.png",
       size: "medium",
-      category_id: 5,
-      user_id: users.find(user => user.username == "user").id
+      category_id: 5
     },
     {
-      coffee_name: "Turkish coffee",
+      coffee_name: "Turkish Coffee",
       description: "Turkish coffee, also known as Oriental coffee, is a popular beverage that is enjoyed throughout the Middle East. It is made in a long handled pot which is mostly made of copper or brass and is called cezve or ibrik. Ibrik or cezve is usually a long handled pot that comes with a narrow neck and a wider bottom. One rule of thumb for making this exotic drink is to ensure that your coffee is finely grounded – they cannot be coarse.Turkish people mostly use a brass grinder to grind the coffee beans which is expected to be as fine as caster sugar. This coffee is typically drunk from small cups, which is called Finjan. The coffee making process is only complete when the powder has fully settled at the bottom of the cup. A lot of people prefer using Arabica beans while brewing Turkish coffee but the choice of coffee beans is not really a matter of concern as long as it is medium roast since you have to roast it again through the process of brewing the coffee.",
       price: 50,
       weight: "90 ml",
       picture: "TURKISH-COFFEE.png",
       size: "small",
-      category_id: 5,
-      user_id: users.find(user => user.username == "user").id
+      category_id: 5
     },
     {
       coffee_name: "Americano",
@@ -207,8 +187,7 @@ exports.seed = function (knex) {
       weight: "250 ml",
       picture: "AMERICANO.png",
       size: "medium",
-      category_id: 5,
-      user_id: users.find(user => user.username == "user").id
+      category_id: 5
     },
     {
       coffee_name: "Irish Coffee",
@@ -217,8 +196,7 @@ exports.seed = function (knex) {
       weight: "250 ml",
       picture: "IRISH.png",
       size: "medium",
-      category_id: 5,
-      user_id: users.find(user => user.username == "user").id
+      category_id: 5
     },
     {
       coffee_name: "Cafe Cubano",
@@ -227,28 +205,25 @@ exports.seed = function (knex) {
       weight: "250 ml",
       picture: "CUBANO.png",
       size: "medium",
-      category_id: 5,
-      user_id: users.find(user => user.username == "user").id
+      category_id: 5
     },
     {
-      coffee_name: "Cappuccino ",
+      coffee_name: "Cappuccino",
       description: "Cappuccino is an Italian coffee drink that is made by mixing double espresso shots with steam milk foam. You could even use cream in place of milk in case you want to make the drink thick. The steamed milk is poured on top of the espresso shot and is then topped with whipped cream or thick milk foam. In a traditional cappuccino, the amount of espresso in the mix is 150 ml while the quantity of milk is 180 ml.It takes approximately 10-15 minutes to prepare a glass or cup of cappuccino. It is similar to cafe latte but is smaller in size, but the froth is thicker. To prepare a cup of cappuccino, add a shot of espresso in a cup and pour steamed milk over it. Now add up to 2-3 cm of foam over the steamed milk. You could sprinkle chocolate powder over it if you want, or even add whipped cream over it, depending on your preference in taste.",
       price: 50,
       weight: "250 ml",
       picture: "CAPPUCINO.png",
       size: "medium",
-      category_id: 5,
-      user_id: users.find(user => user.username == "user").id
+      category_id: 5
     },
     {
-      coffee_name: "Cortado ",
+      coffee_name: "Cortado",
       description: "Cortado is a much loved coffee drink in Portugal, Spain and Latin America, and is usually enjoyed as an afternoon drink. This drink is prepared with espresso and steamed milk, to decrease the level of acidity in it. This drink is similar to Macchiato but the milk that is used to prepare it is slightly cooler than macchiato, but the amount of milk in it is of the same level as that of macchiato. The amount of time required to prepare it is 3 minutes.To prepare Cortado is pretty simple! Put the espresso in the cup and add steamed milk to it and it will be ready to be served.",
       price: 50,
       weight: "250 ml",
       picture: "CORTADO.png",
       size: "medium",
-      category_id: 5,
-      user_id: users.find(user => user.username == "user").id
+      category_id: 5
     },
     {
       coffee_name: "Plain Coffee",
@@ -257,8 +232,7 @@ exports.seed = function (knex) {
       weight: "250 ml",
       picture: "PLAIN-COFFEE.png",
       size: "medium",
-      category_id: 5,
-      user_id: users.find(user => user.username == "user").id
+      category_id: 5
     },
     {
       coffee_name: "Special-Espresso",
@@ -267,8 +241,7 @@ exports.seed = function (knex) {
       weight: "75 ml",
       picture: "coffee-drinks_espresso.jpg",
       size: "small",
-      category_id: 6,
-      user_id: users.find(user => user.username == "user").id
+      category_id: 6
     },
     {
       coffee_name: "Special-Double-Espresso",
@@ -277,8 +250,7 @@ exports.seed = function (knex) {
       weight: "120 ml",
       picture: "coffee-drinks_double-espresso.jpg",
       size: "small",
-      category_id: 6,
-      user_id: users.find(user => user.username == "user").id
+      category_id: 6
     },
     {
       coffee_name: "Special-Red-Eye",
@@ -287,8 +259,7 @@ exports.seed = function (knex) {
       weight: "235 ml",
       picture: "coffee-drinks_red-eye.jpg",
       size: "medium",
-      category_id: 6,
-      user_id: users.find(user => user.username == "user").id
+      category_id: 6
     },
     {
       coffee_name: "Special-Black-Eye",
@@ -297,8 +268,7 @@ exports.seed = function (knex) {
       weight: "235 ml",
       picture: "coffee-drinks_black-eye.jpg",
       size: "medium",
-      category_id: 6,
-      user_id: users.find(user => user.username == "user").id
+      category_id: 6
     },
     {
       coffee_name: "Special-Americano",
@@ -307,8 +277,7 @@ exports.seed = function (knex) {
       weight: "200 ml",
       picture: "coffee-drinks_americano.jpg",
       size: "medium",
-      category_id: 6,
-      user_id: users.find(user => user.username == "user").id
+      category_id: 6
     },
     {
       coffee_name: "Special-Long-Black",
@@ -317,8 +286,7 @@ exports.seed = function (knex) {
       weight: "250 ml",
       picture: "coffee-drinks_long-black.jpg",
       size: "medium",
-      category_id: 6,
-      user_id: users.find(user => user.username == "user").id
+      category_id: 6
     },
     {
       coffee_name: "Special-Macchiato",
@@ -327,8 +295,7 @@ exports.seed = function (knex) {
       weight: "80 ml",
       picture: "coffee-drinks_macchiato.jpg",
       size: "small",
-      category_id: 6,
-      user_id: users.find(user => user.username == "user").id
+      category_id: 6
     },
     {
       coffee_name: "Special-Long-Macchiato",
@@ -337,8 +304,7 @@ exports.seed = function (knex) {
       weight: "200 ml",
       picture: "coffee-drinks_long-macchiato.jpg",
       size: "medium",
-      category_id: 6,
-      user_id: users.find(user => user.username == "user").id
+      category_id: 6
     },
     {
       coffee_name: "Special-Cortado",
@@ -347,8 +313,7 @@ exports.seed = function (knex) {
       weight: "200 ml",
       picture: "coffee-drinks_cortado.jpg",
       size: "medium",
-      category_id: 6,
-      user_id: users.find(user => user.username == "user").id
+      category_id: 6
     },
     {
       coffee_name: "Special-Breve",
@@ -357,8 +322,7 @@ exports.seed = function (knex) {
       weight: "200 ml",
       picture: "coffee-drinks_breve.jpg",
       size: "medium",
-      category_id: 6,
-      user_id: users.find(user => user.username == "user").id
+      category_id: 6
     },
     {
       coffee_name: "Special-Cappuccino",
@@ -367,8 +331,7 @@ exports.seed = function (knex) {
       weight: "235 ml",
       picture: "coffee-drinks_cappuccino.jpg",
       size: "medium",
-      category_id: 6,
-      user_id: users.find(user => user.username == "user").id
+      category_id: 6
     },
     {
       coffee_name: "Special-Flat-White",
@@ -377,8 +340,7 @@ exports.seed = function (knex) {
       weight: "235 ml",
       picture: "coffee-drinks_flat-white.jpg",
       size: "medium",
-      category_id: 6,
-      user_id: users.find(user => user.username == "user").id
+      category_id: 6
     },
     {
       coffee_name: "Special-Caffee-Latte",
@@ -387,8 +349,7 @@ exports.seed = function (knex) {
       weight: "450 ml",
       picture: "coffee-drinks_caffe-latte.jpg",
       size: "medium",
-      category_id: 6,
-      user_id: users.find(user => user.username == "user").id
+      category_id: 6
     },
     {
       coffee_name: "Special-Mocha",
@@ -397,8 +358,7 @@ exports.seed = function (knex) {
       weight: "235 ml",
       picture: "coffee-drinks_mocha.jpg",
       size: "medium",
-      category_id: 6,
-      user_id: users.find(user => user.username == "user").id
+      category_id: 6
     },
     {
       coffee_name: "Special-Vienna",
@@ -407,8 +367,7 @@ exports.seed = function (knex) {
       weight: "150 ml",
       picture: "coffee-drinks_vienna.jpg",
       size: "small",
-      category_id: 6,
-      user_id: users.find(user => user.username == "user").id
+      category_id: 6
     },
     {
       coffee_name: "Special-Affogato",
@@ -417,8 +376,7 @@ exports.seed = function (knex) {
       weight: "200 ml",
       picture: "coffee-drinks_affogato.jpg",
       size: "medium",
-      category_id: 6,
-      user_id: users.find(user => user.username == "user").id
+      category_id: 6
     },
     {
       coffee_name: "Special-Cafe-au-Lait",
@@ -427,8 +385,7 @@ exports.seed = function (knex) {
       weight: "350 ml",
       picture: "coffee-drinks_cafe-au-lait.jpg",
       size: "large",
-      category_id: 6,
-      user_id: users.find(user => user.username == "user").id
+      category_id: 6
     },
     {
       coffee_name: "Special-Iced-Coffee",
@@ -437,8 +394,7 @@ exports.seed = function (knex) {
       weight: "450 ml",
       picture: "coffee-drinks_iced-coffee.jpg",
       size: "large",
-      category_id: 6,
-      user_id: users.find(user => user.username == "user").id
+      category_id: 6
     },
     {
       coffee_name: "Cold-Brew",
@@ -447,8 +403,7 @@ exports.seed = function (knex) {
       weight: "200 ml",
       picture: "1.PNG",
       size: "small",
-      category_id: 2,
-      user_id: users.find(user => user.username == "user").id
+      category_id: 2
     },
     {
       coffee_name: "Turkish-Coffee-Strong",
@@ -457,8 +412,7 @@ exports.seed = function (knex) {
       weight: "150 ml",
       picture: "2.PNG",
       size: "small",
-      category_id: 1,
-      user_id: users.find(user => user.username == "user").id
+      category_id: 1
     },
     {
       coffee_name: "Caffe Latte Small",
@@ -467,8 +421,7 @@ exports.seed = function (knex) {
       weight: "100 ml",
       picture: "3.PNG",
       size: "small",
-      category_id: 1,
-      user_id: users.find(user => user.username == "user").id
+      category_id: 1
     },
     {
       coffee_name: "Espresso Black",
@@ -477,8 +430,7 @@ exports.seed = function (knex) {
       weight: "60 ml",
       picture: "4.PNG",
       size: "small",
-      category_id: 1,
-      user_id: users.find(user => user.username == "user").id
+      category_id: 1
     },
     {
       coffee_name: "Cappuccino Steamed Milk",
@@ -487,8 +439,7 @@ exports.seed = function (knex) {
       weight: "300 ml",
       picture: "5.PNG",
       size: "large",
-      category_id: 1,
-      user_id: users.find(user => user.username == "user").id
+      category_id: 1
     },
     {
       coffee_name: "Viennal Coffee",
@@ -497,8 +448,7 @@ exports.seed = function (knex) {
       weight: "250 ml",
       picture: "6.PNG",
       size: "medium",
-      category_id: 1,
-      user_id: users.find(user => user.username == "user").id
+      category_id: 1
     },
     {
       coffee_name: "Caf' Mocha",
@@ -507,8 +457,7 @@ exports.seed = function (knex) {
       weight: "350 ml",
       picture: "7.PNG",
       size: "large",
-      category_id: 1,
-      user_id: users.find(user => user.username == "user").id
+      category_id: 1
     },
     {
       coffee_name: "Double Caramel Macchiato",
@@ -517,8 +466,7 @@ exports.seed = function (knex) {
       weight: "400 ml",
       picture: "8.PNG",
       size: "large",
-      category_id: 1,
-      user_id: users.find(user => user.username == "user").id
+      category_id: 1
     },
     {
       coffee_name: "Original Coffee with Milk",
@@ -527,8 +475,7 @@ exports.seed = function (knex) {
       weight: "250 ml",
       picture: "9.PNG",
       size: "medium",
-      category_id: 1,
-      user_id: users.find(user => user.username == "user").id
+      category_id: 1
     },
     {
       coffee_name: "Refreshing Brew",
@@ -537,8 +484,7 @@ exports.seed = function (knex) {
       weight: "250 ml",
       picture: "cold brew.jpg",
       size: "medium",
-      category_id: 2,
-      user_id: users.find(user => user.username == "user").id
+      category_id: 2
     },
     {
       coffee_name: "Frappe",
@@ -547,8 +493,7 @@ exports.seed = function (knex) {
       weight: "300 ml",
       picture: "Frappe.jpg",
       size: "large",
-      category_id: 2,
-      user_id: users.find(user => user.username == "user").id
+      category_id: 2
     },
     {
       coffee_name: "Freakshake",
@@ -557,8 +502,7 @@ exports.seed = function (knex) {
       weight: "350 ml",
       picture: "freakshake.jpg",
       size: "large",
-      category_id: 2,
-      user_id: users.find(user => user.username == "user").id
+      category_id: 2
     },
     {
       coffee_name: "Iced Latte",
@@ -567,8 +511,7 @@ exports.seed = function (knex) {
       weight: "350 ml",
       picture: "ice latte.jpg",
       size: "large",
-      category_id: 2,
-      user_id: users.find(user => user.username == "user").id
+      category_id: 2
     },
     {
       coffee_name: "Iced Mocha",
@@ -577,8 +520,7 @@ exports.seed = function (knex) {
       weight: "250 ml",
       picture: "Cafe_Mocha.jpg",
       size: "medium",
-      category_id: 2,
-      user_id: users.find(user => user.username == "user").id
+      category_id: 2
     }
   ]);
 }
