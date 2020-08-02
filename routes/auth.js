@@ -80,8 +80,58 @@ router.post("/register", (req, res) => {
             response: "Username or password are missing. Please try again."
         });
     }
-    
+
+
 });
+
+
+router.post('/login', (req, res) => {
+    // Get the data from the request
+    const {
+        username,
+        password
+    } = req.body;
+    // Validate the data 
+    if (username && password) {
+        // Check if user exists and get their password
+        try {
+            User.query().select().where("username", username).limit(1).then(found => {
+                if (found.length > 0) { // user exists --> move on
+                    // 4. bcrypt compare the password
+                    bcrypt.compare(password, found[0].password).then(result => {
+                        if (result) {
+                            // 6. session becomes "used"
+                            // Send a response based on the comparison handle session
+                            req.session.signedIn = true;
+                            req.session.userId = found[0].id;
+                            return res.send({
+                                response: true
+                            });
+                        }
+                        // 5. responses 
+                        return res.status(400).send({
+                            response: "Your password is invalid."
+                        });
+                    });
+                } else {
+                    return res.status(400).send({
+                        response: "Your username is invalid."
+                    });
+                }
+
+            });
+        } catch (error) {
+            return res.status(500).send({
+                response: "Something went wrong with the DB!"
+            });
+        }
+    } else {
+        return res.status(400).send({
+            response: "Username or password are missing!"
+        });
+    }
+});
+
 router.get('/logout', (req, res) => {
     if (req.session) {
         req.session.destroy(err => {
