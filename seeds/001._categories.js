@@ -1,7 +1,6 @@
 exports.seed = function (knex) {
   // Inserts seed entries
-  return knex('categories').insert([
-    {
+  return knex('categories').insert([{
       id: 1,
       category: "Hot Coffee Drinks"
     },
