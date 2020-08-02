@@ -1,6 +1,6 @@
 <div>
     <h1>Register</h1>
-    <form action="/register" method="POST">
+    <form name="register">
         <div class="form-group">
             <label>Username</label>
             <input type="text" class="form-control" name="username" placeholder="Username" required>
@@ -9,6 +9,7 @@
             <label>Password</label>
             <input type="password" class="form-control" name="password" placeholder="Password" required>
         </div>
-        <button type="submit" class="btn btn-outline-danger">Submit</button>
-    </form>
+        <div class="btn-group">
+            <button type="button" onclick="registerFunction()" class="button button1">Register</button>
+        </div>    </form>
 </div>
