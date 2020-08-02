@@ -8,12 +8,12 @@ exports.seed = function (knex) {
     {
       username: "user1",
       email: "user1@user-area.com",
-      password: "user_pass1"
+      password: "password1"
     }, //user_pass1
     {
       username: "user2",
       email: "user2@user-area.com",
-      password: "user_pass2"
+      password: "password2"
     } //user_pass2
   ]);
 
