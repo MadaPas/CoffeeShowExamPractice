@@ -3,7 +3,6 @@ exports.up = function (knex) {
         .createTable("users", table => {
             table.increments("id");
             table.string("username").unique().notNullable();
-            table.string("email").unique().notNullable();
             table.string("password").notNullable();
 
             table.dateTime("updated_at").defaultTo(knex.raw("NULL ON UPDATE CURRENT_TIMESTAMP"));
