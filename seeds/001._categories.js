@@ -1,13 +1,30 @@
+exports.seed = function (knex) {
+  // Inserts seed entries
+  return knex('categories').insert([
+    {
+      id: 1,
+      category: "Hot Coffee Drinks"
+    },
+    {
+      id: 2,
+      category: "Cold Coffee Drinks"
+    },
+    {
+      id: 3,
+      category: "Tea-Packs"
+    },
+    {
+      id: 4,
+      category: "Coffee-Beans"
+    },
+    {
+      id: 5,
+      category: "Original Coffee Collection"
+    },
+    {
+      id: 6,
+      category: "Special Coffee Collection"
+    }
 
-exports.seed = function(knex) {
-  // Deletes ALL existing entries
-  return knex('table_name').del()
-    .then(function () {
-      // Inserts seed entries
-      return knex('table_name').insert([
-        {id: 1, colName: 'rowValue1'},
-        {id: 2, colName: 'rowValue2'},
-        {id: 3, colName: 'rowValue3'}
-      ]);
-    });
-};
+  ]);
+}
