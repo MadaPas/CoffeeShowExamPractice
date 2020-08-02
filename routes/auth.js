@@ -13,7 +13,6 @@ const fs = require('fs');
 
 const header = fs.readFileSync('./public/fragments/header.html', 'utf8');
 const navbarIndex = fs.readFileSync('./public/fragments/navbarIndex.html', 'utf8');
-const navbarUser = fs.readFileSync('./public/fragments/navbarUser.html', 'utf8');
 const footer = fs.readFileSync('./public/fragments/footer.html', 'utf8');
 
 const login = fs.readFileSync('./public/auth/login/login.html', 'utf8');
@@ -80,7 +79,6 @@ router.post("/register", (req, res) => {
             response: "Username or password are missing. Please try again."
         });
     }
-
 
 });
 
